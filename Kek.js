@@ -2,7 +2,7 @@ var fl = 0;
 
 function dinam(){
     fl = document.getElementById("Tovar").value;
-    if(fl === 0){
+    if(fl == 0){
         document.getElementById("RadioRaz").style.display = "none";
         document.getElementById("CheckUs").style.display = "none";
     }
@@ -27,7 +27,7 @@ function summa(){
     var price;
     var kol;
     var suma;
-    if(fl === 0){
+    if(fl == 0){
         price = 100;
         kol = document.getElementById("Kol").value;
         suma = kol*price;
