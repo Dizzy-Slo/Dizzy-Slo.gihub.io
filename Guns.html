@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>КосмоМодуль</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="Kek.js"></script>
+  </head>
+  <body onload="dinam(); summa()">
+
+    <div class="bg-dark mb-0 mx-auto">
+      <div class="max">
+        <header class="pl-5">
+          <div class="d-flex text-white">       
+            <img src="LOGOGO.png" alt="Loli Company">
+            <h2 class="pt-5">Andrew Company</h2>     
+          </div> 
+        </header>
+      </div>
+    </div>
+
+    <main>  
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+          <a class="navbar-brand text-white" >Меню</a>
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="./index.html">Продукция <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./index.html">О нас</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="container-fluid d-flex flex-column colshi text-white">
+
+          <div class="rounded bg-dark hiokna container-fluid d-flex mb-3 flex-row align-items-center">
+            <img src="Гаусс-система.png" class="w-15 h-15" alt="Гаусс-система">
+            <p class="card-text ml-4">Гаусс-система - это стандартные орудия, подходящие для пробития щитов и брони. 
+              Имеют высокую дальность стрелбы, но при этом обладают низкой точностью.</p>
+          </div>
+
+          <div class="rounded bg-dark hiokna container-fluid d-flex mb-3 flex-row align-items-center">
+            <img src="Бронебойная_автопушка.png" class="w-15 h-15" alt="Бронебойная автопушка">
+            <p class="card-text ml-4">Бронебойная автопушка - это улучшенная версия гаусс орудий. 
+              Главными отличиями являются повышенные скорострельность и урон, а так же хорошая точность.</p>
+          </div>
+
+          <div class="rounded mb-3 bg-dark hiokna container-fluid d-flex flex-row align-items-center">
+            <img src="Вихревые_ракеты.png" class="w-15 h-15" alt="Вихревые ракеты">
+            <p class="card-text ml-4">Вихревые ракеты наносят большой урон и могут 
+              избежать ПРО из-за большой численности.</p>
+          </div>
+
+          <div class="rounded mb-3 bg-dark hiokna container-fluid d-flex flex-row align-items-center">
+              <img src="Разрушительные_торпеды.png" class="w-15 h-15" alt="Разрушительные торпеды">
+              <p class="card-text ml-4">Разрушительные торпеды наносят огромный урон и идеально подходят
+                для нападения на одиночную цель</p>
+          </div>
+
+          <form class="bg-dark p-3 mb-3 rounded" action="http://example.com/" method="GET">
+            <fieldset>
+              <legend>Заказ</legend>
+              <div class="d-flex justify-content-between rounded">
+                <div class="form-group">	
+                    <label>Имя</label>
+                    <input name="Name" class="form-control" placeholder="Введите имя">
+                </div>
+                 <div class="form-group">
+                    <label>E-mail адрес</label>
+                   <input type="email" name="E-mail" class="form-control" placeholder="Введите E-mail">
+                </div>
+                 <div class="form-group">	
+                    <label>Дата рождения</label>
+                    <input name="Date" class="form-control" placeholder="14.08.1488">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="Tovar">Выбор товара</label>
+                <select class="form-control text-white bg-secondary" onchange="dinam(); summa()" name="Tovari" id="Tovar">
+                  <option value="0" selected="selected">Гаусс-система</option>
+                  <option value="1">Бронебойная автопушка</option>
+                  <option value="2">Вихревые ракеты</option>
+                  <option value="3">Разрушительные торпеды</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="Kol">Количество</label>
+                <input name="Kol" id="Kol" type="number" 
+                class="ml-4 bg-secondary text-white rounded" min="1" value="1" onchange="summa()">
+              </div>
+              <fieldset class="form-group" id="RadioRaz">
+                <legend>Размеры</legend>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="Razmer"
+                      value="0.5" checked="" id="Mal" onchange="summa()">
+                    Маленький
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="Razmer"
+                      value="1" checked="" id="Sr" onchange="summa()">
+                    Обычный
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="form-group" id="CheckUs">
+                <legend>Доп услуги</legend>
+                <div class="form-check d-flex flex-column">
+                  <label class="form-check-label">
+                    <input class="form-check-input" id="Dost" type="checkbox" value="2"
+                     checked="checked" onchange="summa()">
+                    Доставка
+                  </label>
+                </div>
+              </fieldset>
+              <div class="my-2">
+                <label>Цена:</label>
+                <span id="sum">-</span>
+                <span>энергокредитов.</span>
+              </div>
+              <button type="submit" class="btn btn-primary">Заказать</button>
+            </fieldset>
+          </form>
+
+
+          
+        </div>
+      </div>
+    </main>
+    <footer class="d-flex bg-dark text-white align-items-center">
+      <div class="pl-2">Andrew Company (Сайт создан для задания, не в коммерческих целях)</div>
+    </footer>
+
+  </body>
+</html>
